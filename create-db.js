@@ -5,13 +5,16 @@ MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("mydb");
 
-    var schema= new Schema({
+    
+    //outline for new objects in database:
+
+    /*var schema= new Schema({
       task_desc:  { type: String},
       date_time: { type: Date, default: Date.now },
       difficulty: {type: Number},
       important: {type: Boolean},
       complete: {type: Boolean}
-    }); 
+    }); */
 
     var myobj = { 
       description: "homework", 
@@ -20,9 +23,9 @@ MongoClient.connect(url, function(err, db) {
       important: true,
       complete: true
      };
-     dbo.collection("customers").insertOne(myobj, function(err, res) {
+     dbo.collection("tasks").insertOne(myobj, function(err, res) {
       if (err) throw err;
-      console.log("collection created");
+      console.log("added obj 1");
       db.close();
     });
   });
