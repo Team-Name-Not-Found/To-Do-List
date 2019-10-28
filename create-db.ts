@@ -4,6 +4,8 @@ var url = "mongodb://localhost:27017/";
 MongoClient.connect(url, function (err, db) {
   if (err) throw err;
 
+  var dbo = db.db("mydb");
+
   var myobj = {
     description: "homework",
     date_time: 2019 - 10 - 23,
@@ -11,8 +13,8 @@ MongoClient.connect(url, function (err, db) {
     important: true,
     complete: true
   };
-  
-  db.createCollection("tasks", {
+
+  dbo.createCollection("tasks", {
     validator: {
       $jsonSchema: {
         required: [
