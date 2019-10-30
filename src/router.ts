@@ -10,7 +10,7 @@ export class ApiRouter {
         this.router.get("/task", this.controller.getTask);
         this.router.post("/task", this.controller.postTask);
         this.router.delete("/task", this.controller.deleteTask);
-        //this.router.update("/task", this.controller.updateTask);
+        // this.router.update("/task", this.controller.updateTask);
 
         return this.router;
     }
