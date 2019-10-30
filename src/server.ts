@@ -14,7 +14,7 @@ class Application {
         this.app.use(bodyParser.json());
         this.initCors();
     }
-    
+
     // Starts the server on the port specified in the environment or on port 3000 if none specified.
     public start(): void {
         this.buildRoutes();
@@ -26,7 +26,7 @@ class Application {
     // but should be setup correctly anyway.  Without this, angular would not be able to access the api it it is on
     // another server.
     public initCors(): void {
-        this.app.use(function (req: express.Request, res: express.Response, next: any) {
+        this.app.use(function(req: express.Request, res: express.Response, next: any) {
             res.header("Access-Control-Allow-Origin", "*");
             res.header("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
             res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Credentials");
