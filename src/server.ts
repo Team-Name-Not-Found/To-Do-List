@@ -14,6 +14,7 @@ class Application {
         this.app.use(bodyParser.json());
         this.initCors();
     }
+    
     // Starts the server on the port specified in the environment or on port 3000 if none specified.
     public start(): void {
         this.buildRoutes();
@@ -37,5 +38,6 @@ class Application {
     public buildRoutes(): void {
         this.app.use("/api", new ApiRouter().getRouter());
     }
+
 }
 new Application().start();
