@@ -15,12 +15,12 @@ due_date: {
 },
 status: {
    type: [{
-    type: String,
+    type:String,
     enum: ['pending', 'ongoing', 'complete']
  }]
 },
 priority: {
-	  type: Integer
+	  type: Number
 }
 });
 
