@@ -4,7 +4,7 @@ var url = "mongodb://localhost:27017/";
 MongoClient.connect(url, function (err, db) {
   if (err) throw err;
 
-  var dbo = db.db("mydb");
+  var dbo = db.db("ToDo");
 
   var myobj = {
     description: "homework",
@@ -55,6 +55,6 @@ MongoClient.connect(url, function (err, db) {
     }
   })
   if (err) throw err;
-  console.log("added obj 1");
+  console.log("created db");
   db.close();
 });
