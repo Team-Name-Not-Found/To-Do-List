@@ -1,22 +1,47 @@
 {
-  "name": "to-do-list",
+  "name": "nodetscstarter",
   "version": "1.0.0",
-  "description": "Project 2",
-  "main": "index.js",
+  "description": "",
+  "main": "dist/server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.7"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.1",
+    "@types/express": "^4.17.1",
+    "@types/node": "^12.7.11",
+    "nodemon": "^1.19.4",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.0",
+    "ts-node-dev": "^1.0.0-pre.43",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3"
+  },
   "scripts": {
+    "clean": "rimraf dist/*",
+    "lint": "tslint -c tslint.json -p tsconfig.json --fix",
+    "tsc": "tsc",
+    "build": "npm-run-all clean lint tsc",
+    "dev-deb": "ts-node-dev --respawn --transpileOnly --nolazy --inspect-brk=5858 ./src/server.ts",
+    "dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
+    "prod": "npm-run-all build start",
+    "prod-deb": "npm-run-all start-deb",
+    "start": "nodemon --nolazy ./dist/server.js",
+    "start-deb": "nodemon --nolazy --inspect-brk=5858 ./dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Team-Name-Not-Found/To-Do-List.git"
+    "url": "git+https://github.com/gsilber/NodeTypescriptStarter.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Team-Name-Not-Found/To-Do-List/issues"
+    "url": "https://github.com/gsilber/NodeTypescriptStarter/issues"
   },
-  "homepage": "https://github.com/Team-Name-Not-Found/To-Do-List#readme",
-  "dependencies": {
-    "mongodb": "^3.3.3"
-  }
+  "homepage": "https://github.com/gsilber/NodeTypescriptStarter#readme"
 }
