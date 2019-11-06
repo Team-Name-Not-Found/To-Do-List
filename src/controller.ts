@@ -1,6 +1,6 @@
 import express from "express";
 
-let mongoose = require("mongoose");
+const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/mydb");
 
 export class Controller {
