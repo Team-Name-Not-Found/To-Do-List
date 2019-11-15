@@ -1,4 +1,4 @@
-import express from "express";
+import * as express from "express";
 
 export class Controller {
     public getTask(req: express.Request, res: express.Response): void {
