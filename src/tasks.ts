@@ -1,9 +1,8 @@
-import { prop, Typegoose, ModelType, InstanceType } from 'typegoose';
-import * as mongoose from 'mongoose';
+import {MongoClient} from 'mongodb';
 
-mongoose.connect('mongodb://localhost:27017/');
+MongoClient.connect('mongodb://localhost:27017/');
 
-let taskSchema = new mongoose.Schema({
+let taskSchema = new MongoClient.Schema({
     task_desc: String,
     date_time: {type: Date, default: Date.now},
     difficulty: String, 
