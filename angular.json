@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularDemo": {
+    "al-sec": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/AngularDemo",
+            "outputPath": "dist/al-sec",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "AngularDemo:build"
+            "browserTarget": "al-sec:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "AngularDemo:build:production"
+              "browserTarget": "al-sec:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AngularDemo:build"
+            "browserTarget": "al-sec:build"
           }
         },
         "test": {
@@ -111,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "AngularDemo:serve"
+            "devServerTarget": "al-sec:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "AngularDemo:serve:production"
+              "devServerTarget": "al-sec:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "AngularDemo"
+  "defaultProject": "al-sec"
 }
