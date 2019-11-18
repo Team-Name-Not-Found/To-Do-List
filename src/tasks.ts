@@ -1,8 +1,8 @@
-import {MongoClient} from 'mongodb';
+import * as mongoose from 'mongodb';
 
-MongoClient.connect('mongodb://localhost:27017/');
+mongoose.connect('mongodb://localhost:27017/');
 
-let taskSchema = new MongoClient.Schema({
+let taskSchema = new mongoose.Schema({
     task_desc: String,
     date_time: {type: Date, default: Date.now},
     difficulty: String, 
