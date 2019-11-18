@@ -1,5 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { MatRippleModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,7 +19,6 @@ import { NewTaskComponent } from './new-task/new-task.component';
   ],
   imports: [
     BrowserModule,
-    MatRippleModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],
