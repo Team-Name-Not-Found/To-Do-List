@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "tsc": "tsc"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/Team-Name-Not-Found/To-Do-List#readme",
   "dependencies": {
+    "@types/node": "^12.12.8",
     "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -25,6 +27,11 @@
     "mongodb": "^3.3.3",
     "mongoose": "^5.7.7",
     "morgan": "^1.9.1",
-    "nodemon": "^1.19.4"
+    "nodemon": "^1.19.4",
+    "tsc": "^1.20150623.0",
+    "tsoa": "^2.5.9"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.2"
   }
 }

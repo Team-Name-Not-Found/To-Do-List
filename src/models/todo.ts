@@ -2,11 +2,19 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var Task = new Schema({
+interface ITodo {
+	_id: string;
+	created_date: Date;
+	due_date: Date;
+	status: string;
+	priority: number;
+}
+
+const TaskSchema = new Schema({
     name: {
     	  type: String
 },
-Created_date: {
+created_date: {
     type:Date,
     default: Date.now
 },
@@ -24,4 +32,5 @@ priority: {
 }
 });
 
-module.exports = mongoose.model('Tasks', Task);
+const TodoModel = mongoose.model('Todo', TaskSchema);
+export {TodoModel, ITodo}
