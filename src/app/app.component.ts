@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import {DialogComponent} from './dialog/dialog.component';
-import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +8,5 @@ import { MatDialog } from '@angular/material';
 export class AppComponent {
   menuClass = 'active bg-info';
   title = 'ToDo';
-
-  constructor(public dialog: MatDialog){}
-
-  openDialog(){
-    this.dialog.open(DialogComponent);
-  }
 
 }
