@@ -1,0 +1,27 @@
+'use strict';
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+var Task = new Schema({
+    name: {
+    	  type: string
+},
+Created_date: {
+    type:Date,
+    default: Date.now
+},
+due_date: {
+	  type:Date
+},
+status: {
+   type: [{
+    type: string,
+    enum: ['pending', 'ongoing', 'complete']
+ }]
+},
+priority: {
+	  type: number
+}
+});
+
+module.exports = mongoose.model('Tasks', Task);
