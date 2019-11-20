@@ -1,5 +1,4 @@
 import * as mongoose from 'mongodb';
-
 mongoose.connect('mongodb://localhost:27017/');
 
 /* let taskSchema = new mongoose.Schema({

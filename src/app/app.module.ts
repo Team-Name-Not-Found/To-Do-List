@@ -7,13 +7,15 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewTaskComponent } from './new-task/new-task.component';
+import { NewNoteComponent } from './new-note/new-note.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MenuComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    NewNoteComponent
   ],
   entryComponents: [
   ],
