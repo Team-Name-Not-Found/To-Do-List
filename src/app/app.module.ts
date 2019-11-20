@@ -8,6 +8,8 @@ import { MenuComponent } from './menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { NewNoteComponent } from './new-note/new-note.component';
+import { LoginComponent } from './login/login.component';
+import { SigninComponent } from './signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { NewNoteComponent } from './new-note/new-note.component';
     HomeComponent,
     MenuComponent,
     NewTaskComponent,
-    NewNoteComponent
+    NewNoteComponent,
+    LoginComponent,
+    SigninComponent
   ],
   entryComponents: [
   ],

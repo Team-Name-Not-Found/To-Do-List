@@ -4,6 +4,17 @@ h1{
     font-size: 36px;
 }
 
+h2{
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    color: gray;
+    font-size: 14px;
+}
+
+a{
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    color: gray;
+    font-size: 18px;
+}
 .column-left{
     position: absolute;
     width: 25%;
@@ -40,6 +51,10 @@ h1{
 }
     
 .button-new:hover {
+    border: 2px solid rgba(58, 133, 191, 0.75);
+}
+
+.button-signup:hover {
     border: 2px solid rgba(58, 133, 191, 0.75);
 }
 
