@@ -1,8 +1,8 @@
-import express from "express";
+import { Express } from "express";
 import { Controller } from "./controller";
 
-export class ApiRouter {
-    private router: express.Router = express.Router();
+/*export class ApiRouter {
+     private router: Express.Router = Express.Router();
     private controller: Controller = new Controller();
 
     // Creates the routes for this router and returns a populated router object
@@ -13,6 +13,6 @@ export class ApiRouter {
         // this.router.update("/task", this.controller.updateTask);
 
         return this.router;
-    }
+    } 
 
-}
+}*/

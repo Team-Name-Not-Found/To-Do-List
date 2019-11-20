@@ -1,19 +1,19 @@
-import express from "express";
+import {Express} from "express";
 
 export class Controller {
-    public getTask(req: express.Request, res: express.Response): void {
+    public getTask(req: Express.Request, res: Express.Response): void {
 
     }
 
-    public postTask(req: express.Request, res: express.Response): void {
+    public postTask(req: Express.Request, res: Express.Response): void {
 
     }
 
-    public deleteTask(req: express.Request, res: express.Response): void {
+    public deleteTask(req: Express.Request, res: Express.Response): void {
 
     }
 
-    public updateTask(req: express.Request, res: express.Response): void {
+    public updateTask(req: Express.Request, res: Express.Response): void {
 
     }
 }

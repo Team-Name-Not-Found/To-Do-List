@@ -1,8 +1,8 @@
-
-
 <div class="row-top">
-    <!-- <button class ="button button-new" (click)="ClickButton()">+ new task</button> -->
-    <button class="button button-new">+ new task</button>
+    <div>
+        <button [routerLink]="['/new-task']" class="button button-new">+ new task</button>
+        <button [routerLink]="['/new-note']" class="button button-new">+ new note</button>
+    </div>
 </div>
 
 <div class="row">

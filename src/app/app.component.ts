@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   menuClass = 'active bg-info';
   title = 'ToDo';
+
 }
