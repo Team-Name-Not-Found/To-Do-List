@@ -2,10 +2,10 @@
   "name": "to-do-list",
   "version": "1.0.0",
   "description": "Project 2",
-  "main": "toDoController.ts",
+  "main": "server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon toDoController.ts"
+    "start": "nodemon server.ts"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/Team-Name-Not-Found/To-Do-List#readme",
   "dependencies": {
-    "mongodb": "^3.3.3"
+    "express": "^4.17.1",
+    "mongodb": "^3.3.3",
+    "nodemon": "2.0.0",
+    "mongoose": "5.7.11"
   }
 }
