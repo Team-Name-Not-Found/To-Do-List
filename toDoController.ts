@@ -4,6 +4,11 @@ var mongoose = require('mongoose'),
   
 
 exports.list_all_tasks = function(req, res) {
+  // Sort all the elements first before listing them.
+  Task.find({}).sort({priority: -1}).exec(function(err, docs) { 
+    if (err)
+      res.send(err);
+   });
   Task.find({}, function(err, task) {
     if (err)
       res.send(err);
@@ -43,8 +48,6 @@ exports.update_a_task = function(req, res) {
 
 
 exports.delete_a_task = function(req, res) {
-
-
   Task.remove({
     _id: req.params.taskId
   }, function(err, task) {
