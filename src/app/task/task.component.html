@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Task List <button class="btn btn-success" (click)="logout()">Logout</button></h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>task_desc</th>
+          <th>task_date</th>
+          <th>difficulty</th>
+          <th>importaint</th>
+          <th>compleate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books">
+          <td>{{ task.task_desc }}</td>
+          <td>{{ task.task_date }}</td>
+          <td>{{ task.difficulty }}</td>
+          <td>{{ task.importaint }}</td>
+          <td>{{ task.compleate }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

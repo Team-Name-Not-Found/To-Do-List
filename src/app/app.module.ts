@@ -1,28 +1,54 @@
-import { BrowserModule } from '@angular/platform-browser';
+  import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { MenuComponent } from './menu/menu.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NewTaskComponent } from './new-task/new-task.component';
-import { NewNoteComponent } from './new-note/new-note.component';
+import {TaskComponent} from './task/task.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
+const appRoutes: Routes =
+[
+  {
+    path:'tasks',
+    component: TaskComponent,
+    data:{title: 'Task List'}
+  },
+  {
+    path:'login',
+    component: LoginComponent,
+    data:{title: 'Login'}
+  },
+  {
+    path:'signup',
+    component: SignupComponent,
+    data: {title: 'Sign Up'}
+  },
+  {
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full'
+  }
+];
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    MenuComponent,
-    NewTaskComponent,
-    NewNoteComponent
-  ],
-  entryComponents: [
+    LoginComponent,
+    SignupComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(
+      appRoutes,
+      {
+        enableTracing: true
+      }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
