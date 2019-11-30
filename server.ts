@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 
 var routes = require('./todoRoutes'); //importing route
-routes(app); //register the route
+routes(app); //register the routex
 
 
 app.listen(port);
