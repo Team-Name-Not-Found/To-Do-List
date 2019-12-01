@@ -6,12 +6,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class IssueService {
 
-  uri = 'http://localhost:4200';
+  uri = 'http://localhost:4000';
 
   constructor(private http: HttpClient) {
   }
 
-  addTask(name, due_date, status, priority) {
+  addTask(name: string, due_date: string, status: string, priority: string) {
     const task = {
       name: name,
       due_date: due_date,

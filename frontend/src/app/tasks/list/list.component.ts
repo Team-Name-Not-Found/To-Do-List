@@ -12,7 +12,7 @@ import { IssueService } from '../../issue.service';
 })
 export class ListComponent implements OnInit {
   tasks: Task[];
-  displayedColumns = ['title', 'responsible', 'severity', 'status', 'actions'];
+  displayedColumns = ['name', 'due_date', 'status', 'priority', 'actions'];
   //constructor() { }
   constructor(private issueService: IssueService, private router: Router) { }
 
@@ -29,11 +29,11 @@ export class ListComponent implements OnInit {
       console.log(this.tasks);
     });
   }
-  editIssue(id) {
+  editTask(id) {
     this.router.navigate([`/edit/${id}`]);
   }
 
-  deleteIssue(id) {
+  deleteTask(id) {
     this.issueService.deleteIssue(id).subscribe(() => {
       this.fetchTasks();
     });

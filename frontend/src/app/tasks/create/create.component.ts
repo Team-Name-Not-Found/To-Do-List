@@ -9,8 +9,6 @@ import { FormGroup, FormBuilder, Validators, FormsModule, ReactiveFormsModule} f
 })
 export class CreateComponent implements OnInit {
 
-  //constructor() { }
- // constructor(private issueService: IssueService, private router: Router) { }
  createForm: FormGroup;
 
  constructor(private issueService: IssueService, private fb: FormBuilder, private router: Router) {
@@ -22,7 +20,7 @@ export class CreateComponent implements OnInit {
    });
  }
 
- addTask(name, due_date, status, priority) {
+ addTask(name: string, due_date: string, status: string, priority: string) {
    this.issueService.addTask(name, due_date, status, priority).subscribe(() => {
      this.router.navigate(['/list']);
    });

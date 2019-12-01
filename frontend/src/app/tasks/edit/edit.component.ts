@@ -15,7 +15,7 @@ import { Task } from '../../issue.model';
 export class EditComponent implements OnInit {
 
   id: String;
-  issue: any = {};
+  task: any = {};
   updateForm: FormGroup;
 
   constructor(private issueService: IssueService, private router: Router, private route: ActivatedRoute, private snackBar: MatSnackBar, private fb: FormBuilder) { 
@@ -26,11 +26,11 @@ export class EditComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.id = params.id;
       this.issueService.getTaskById(this.id).subscribe(res => {
-        this.issue = res;
-        this.updateForm.get('name').setValue(this.issue.name);
-        this.updateForm.get('due_date').setValue(this.issue.due_date);
-        this.updateForm.get('status').setValue(this.issue.status);
-        this.updateForm.get('priority').setValue(this.issue.priority);
+        this.task = res;
+        this.updateForm.get('name').setValue(this.task.name);
+        this.updateForm.get('due_date').setValue(this.task.due_date);
+        this.updateForm.get('status').setValue(this.task.status);
+        this.updateForm.get('priority').setValue(this.task.priority);
         //this.updateForm.get('status').setValue(this.issue.status);
       });
     });
@@ -45,7 +45,7 @@ export class EditComponent implements OnInit {
     });
   }
 
-  updateIssue(name, due_date, status, priority) {
+  updateTask(name, due_date, status, priority) {
     this.issueService.updateTask(this.id, name, due_date, status, priority).subscribe(() => {
       this.snackBar.open('Issue updated successfully', 'OK', {
         duration: 3000,

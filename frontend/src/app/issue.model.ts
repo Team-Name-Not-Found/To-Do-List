@@ -1,7 +1,6 @@
 export interface Task {
 name: String;
-Created_date: Date;
-due_date: Date;
+due_date: String;
 status: String;
-priority: Number;
+priority: String;
 }
