@@ -7,37 +7,10 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome",
-            "url": "http://localhost:8080",
-            "webRoot": "${workspaceFolder}"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch DEV",
-            "runtimeExecutable": "npm",
-            "runtimeArgs": [
-                "run-script",
-                "dev-deb"
-            ],
-            "port": 5858,
-            "env": {
-                "serverPort": "3000"
-            }
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch PROD",
-            "runtimeExecutable": "npm",
-            "runtimeArgs": [
-                "run-script",
-                "prod-deb"
-            ],
-            "port": 5858,
-            "env": {
-                "serverPort": "3000"
-            }
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:4200",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true
         }
     ]
 }

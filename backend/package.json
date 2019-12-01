@@ -1,0 +1,29 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "Project 2",
+  "main": "server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Team-Name-Not-Found/To-Do-List.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Team-Name-Not-Found/To-Do-List/issues"
+  },
+  "homepage": "https://github.com/Team-Name-Not-Found/To-Do-List#readme",
+  "dependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/mongoose": "^5.5.32",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.3",
+    "mongoose": "5.7.11",
+    "nodemon": "2.0.0"
+  }
+}
