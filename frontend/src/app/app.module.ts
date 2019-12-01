@@ -22,12 +22,16 @@ import { MatToolbarModule,
 import { HttpClientModule } from '@angular/common/http';
 import { IssueService } from './issue.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LogInComponent } from './log-in/log-in.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 const routes: Routes = [
   { path: 'create', component: CreateComponent },
   { path: 'edit/:id', component: EditComponent },
   { path: 'list', component: ListComponent },
-  { path: '', redirectTo: '/list', pathMatch: 'full'}
+  { path: 'log-in', component: LogInComponent},
+  { path: 'sign-in', component: SignInComponent},
+  { path: '', redirectTo: '/log-in', pathMatch: 'full'}
 ];
 
 @NgModule({
@@ -35,7 +39,9 @@ const routes: Routes = [
     AppComponent,
     ListComponent,
     CreateComponent,
-    EditComponent
+    EditComponent,
+    LogInComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,

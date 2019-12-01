@@ -6,3 +6,8 @@
 .field-full-width {
     width: 100%;
 }
+
+.mat-raised-button{
+    border-radius:40px;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}

@@ -2,17 +2,17 @@
     <br>
     <mat-card>
       <section class="mat-typography">
-        <h3>Create A New Task</h3>
+        <h3>Create a New Task</h3>
       </section>
       <mat-divider></mat-divider>
       <br>
       <form [formGroup]="createForm" class="create-form">
         <mat-form-field class="field-full-width">
-          <input matInput placeholder="name" formControlName="name" #name>
+          <input matInput placeholder="task name" formControlName="name" #name>
   
         </mat-form-field>
         <mat-form-field class="field-full-width">
-          <input matInput placeholder="due_date" formControlName="due_date" #due_date>
+          <input matInput placeholder="due date" formControlName="due_date" #due_date>
         </mat-form-field>
         <mat-form-field>
           <mat-select placeholder="status" formControlName="status" #status>
@@ -23,15 +23,15 @@
         </mat-form-field>
         <mat-form-field>
             <mat-select placeholder="priority" formControlName="priority" #priority>
-              <mat-option value=Low>Low</mat-option>
-              <mat-option value=Medium>Medium</mat-option>
-              <mat-option value=High>High</mat-option>
+              <mat-option value=Low>low</mat-option>
+              <mat-option value=Medium>medium</mat-option>
+              <mat-option value=High>high</mat-option>
             </mat-select>
         </mat-form-field>
         <mat-divider></mat-divider>
         <br><br>
-        <button mat-raised-button color="accent" routerLink="/list">Back</button>&nbsp;
-        <button type="submit" (click)="addTask(name.value, due_date.value, status.value, priority.value)" [disabled]="createForm.pristine || createForm.invalid" mat-raised-button color="primary">Save</button>
+        <button mat-raised-button color="accent" routerLink="/list">back</button>&nbsp;
+        <button type="submit" (click)="addTask(name.value, due_date.value, status.value, priority.value)" [disabled]="createForm.pristine || createForm.invalid" mat-raised-button color="primary">save</button>
       </form>
     </mat-card>
   </div>
