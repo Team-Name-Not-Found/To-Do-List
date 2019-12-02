@@ -22,12 +22,19 @@ import { MatToolbarModule,
 import { HttpClientModule } from '@angular/common/http';
 import { IssueService } from './issue.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { RegisterComponent } from './register/register.component';
+import { AuthenticationService } from './authentication.service';
+import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
-  { path: 'create', component: CreateComponent },
-  { path: 'edit/:id', component: EditComponent },
-  { path: 'list', component: ListComponent },
-  { path: '', redirectTo: '/list', pathMatch: 'full'}
+  { path: '', component: SignInComponent, pathMatch: 'full' },
+  { path: 'register', component: RegisterComponent },
+  //{ path: '', redirectTo: '/list', pathMatch: 'full'},
+  { path: 'create', component: CreateComponent, canActivate: [AuthGuardService] },
+  { path: 'edit/:id', component: EditComponent, canActivate: [AuthGuardService] },
+  { path: 'list', component: ListComponent, canActivate: [AuthGuardService] },
+  
 ];
 
 @NgModule({
@@ -35,7 +42,9 @@ const routes: Routes = [
     AppComponent,
     ListComponent,
     CreateComponent,
-    EditComponent
+    EditComponent,
+    SignInComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +65,11 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [IssueService],
+  providers: [
+    IssueService,
+    AuthenticationService, 
+    AuthGuardService
+  ],
   bootstrap: [AppComponent]
 })
 

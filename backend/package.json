@@ -19,11 +19,14 @@
   "homepage": "https://github.com/Team-Name-Not-Found/To-Do-List#readme",
   "dependencies": {
     "@types/cors": "^2.8.6",
+    "@types/jsonwebtoken": "^8.3.5",
     "@types/mongoose": "^5.5.32",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.3.3",
     "mongoose": "5.7.11",
-    "nodemon": "2.0.0"
+    "nodemon": "2.0.0",
+    "passport": "^0.4.0"
   }
 }
