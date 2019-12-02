@@ -22,6 +22,7 @@ import { MatToolbarModule,
 import { HttpClientModule } from '@angular/common/http';
 import { IssueService } from './issue.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { LogInComponent } from './log-in/log-in.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 
@@ -62,7 +63,11 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [IssueService],
+  providers: [
+    IssueService,
+    AuthenticationService, 
+    AuthGuardService
+  ],
   bootstrap: [AppComponent]
 })
 

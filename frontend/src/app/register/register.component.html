@@ -1,12 +1,11 @@
+<p>register works!</p>
 <div class="row">
     <div class="column left">
         <h1></h1>
     </div>
     <div class="column middle">
         <div class="container">
-
             <h1>Sign-up:</h1>
-
             <form>
                 <div class="form-group">
                     <label for="user">Username</label>
@@ -17,11 +16,8 @@
                     <label for="pass">Password</label>
                     <input type="password" class="form-control" id="pass" placeholder="Password">
                 </div>
-                <button [routerLink]="['/list']" type="submit" class="button button-new">submit</button>
+                <button [routerLink]="['']" type="submit" class="button button-new">register</button>
             </form>
-            <br>
-            <h2>New member? </h2>
-            <a [routerLink]="['/register']">Sign up!</a>
         </div>
     </div>
     <div class="column right">
