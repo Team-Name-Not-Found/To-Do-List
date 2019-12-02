@@ -7,13 +7,14 @@ h1{
 h2{
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     color: gray;
-    font-size: 16px;
+
+    font-size: 14px;
 }
 
 a{
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     color: gray;
-    font-size: 16px;
+    font-size: 18px;
 }
 .column-left{
     position: absolute;
@@ -52,11 +53,14 @@ a{
 }
     
 .button-new:hover {
-    border: 2px solid rgba(58, 133, 191, 0.75);
+
+    border: #637E9C;
+    background-color : #637E9C;
 }
 
 .button-signup:hover {
-    border: 2px solid rgba(58, 133, 191, 0.75);
+    border: #637E9C;
+    background-color : #637E9C;
 }
 
 .vertical-center {

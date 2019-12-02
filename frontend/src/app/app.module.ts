@@ -22,19 +22,17 @@ import { MatToolbarModule,
 import { HttpClientModule } from '@angular/common/http';
 import { IssueService } from './issue.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { LogInComponent } from './log-in/log-in.component';
 import { SignInComponent } from './sign-in/sign-in.component';
-import { RegisterComponent } from './register/register.component';
-import { AuthenticationService } from './authentication.service';
-import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
-  { path: '', component: SignInComponent, pathMatch: 'full' },
-  { path: 'register', component: RegisterComponent },
-  //{ path: '', redirectTo: '/list', pathMatch: 'full'},
-  { path: 'create', component: CreateComponent, canActivate: [AuthGuardService] },
-  { path: 'edit/:id', component: EditComponent, canActivate: [AuthGuardService] },
-  { path: 'list', component: ListComponent, canActivate: [AuthGuardService] },
-  
+  { path: 'create', component: CreateComponent },
+  { path: 'edit/:id', component: EditComponent },
+  { path: 'list', component: ListComponent },
+  { path: 'log-in', component: LogInComponent},
+  { path: 'sign-in', component: SignInComponent},
+  { path: '', redirectTo: '/log-in', pathMatch: 'full'}
 ];
 
 @NgModule({
@@ -43,8 +41,8 @@ const routes: Routes = [
     ListComponent,
     CreateComponent,
     EditComponent,
-    SignInComponent,
-    RegisterComponent
+    LogInComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
