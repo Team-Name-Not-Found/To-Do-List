@@ -1,35 +1,10 @@
-// //import cors from 'cors';
-// var express = require('express'),
-//   app = express(),
-//   port = process.env.PORT || 4000,
-//   mongoose = require('mongoose'),
-//   cors = require('cors'),
-//   Task = require('./todoModel'), //created model loading here
-//   bodyParser = require('body-parser');
-  
-// // mongoose instance connection url connection
-// mongoose.Promise = global.Promise;
-// mongoose.connect('mongodb://localhost:27017/tasks');
-
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
-
-
-// var routes = require('./todoRoutes'); //importing route
-// routes(app); //register the routex
-
-
-// app.listen(port);
-
-
-// console.log('todo list RESTful API server started on: ' + port);
-
 import * as express from 'express';
 import * as cors from 'cors';
 import * as bodyParser from "body-parser";
 import * as mongoose from "mongoose";
 
 var Task = require('./todoModel')
+var User = require('./users')
 const app = express();
 const router = express.Router();
 
